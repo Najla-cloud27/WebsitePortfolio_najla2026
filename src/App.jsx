@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import CosmicCarousel from './components/CosmicCarousel';
 import cvPdf from './assets/CV Tech-Unaisah.pdf';
+import profilImg from './assets/uness.png';
 import { useState } from 'react';
 
 function App() {
@@ -151,7 +152,7 @@ function App() {
           >
             <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] sm:text-[12vw] md:text-[10vw] lg:text-[10rem] font-black text-white/5 tracking-widest select-none z-0 pointer-events-none whitespace-nowrap w-full text-center overflow-hidden">PORTFOLIO</p>
             <img 
-              src="src/assets/uness.png" 
+              src={profilImg} 
               alt="Unaisah" 
               className="relative z-10 w-full max-w-[280px] lg:max-w-[320px] object-contain drop-shadow-[0_0_40px_rgba(168,85,247,0.4)] hover:scale-105 transition-transform duration-500" 
             />
