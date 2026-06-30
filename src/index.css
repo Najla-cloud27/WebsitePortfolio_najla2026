@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0B0813;
+  background-image: linear-gradient(to right, #1f1635 1px, transparent 1px), linear-gradient(to bottom, #1f1635 1px, transparent 1px);
+  background-size: 3rem 3rem;
+}
+
+.glow-orb-top-right {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(236,72,153,0.12) 0%, rgba(236,72,153,0) 70%);
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb-middle-right {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  top: 40%;
+  right: -100px;
+  background: radial-gradient(circle, rgba(236,72,153,0.1) 0%, rgba(236,72,153,0) 70%);
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb-bottom-left {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  bottom: -300px;
+  left: -200px;
+  background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, rgba(124,58,237,0) 70%);
+  filter: blur(150px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-text-pink {
+  text-shadow: 0 0 20px rgba(236,72,153,0.6), 0 0 40px rgba(236,72,153,0.3);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 20px rgba(168,85,247,0.6), 0 0 40px rgba(168,85,247,0.3);
+}
