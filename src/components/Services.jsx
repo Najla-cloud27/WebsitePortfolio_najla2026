@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const services = [
   {
     title: 'Website Development',
-    description: 'Membangun website modern, responsif, dan performa tinggi menggunakan teknologi terkini seperti React, Laravel, dan Tailwind CSS.',
+    description: 'Building modern, responsive, and high-performance websites using cutting-edge technologies like React, Laravel, and Tailwind CSS.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: 'Flutter UI Development',
-    description: 'Mendesain dan mengembangkan antarmuka pengguna yang elegan dan responsif untuk aplikasi mobile menggunakan Flutter.',
+    description: 'Designing and developing elegant, responsive user interfaces for mobile applications using Flutter framework.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
@@ -21,7 +21,7 @@ const services = [
   },
   {
     title: 'Website Support',
-    description: 'Memberikan layanan perawatan, optimasi, dan dukungan teknis untuk website agar tetap berjalan optimal dan aman.',
+    description: 'Providing maintenance, optimization, and technical support services to keep websites running smoothly, securely, and up-to-date.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.854 5.855a2.25 2.25 0 01-3.182-3.182l5.855-5.854M16.5 12l1.5-1.5a4.5 4.5 0 00-6.364-6.364L9 6.75M12 16.5l-1.5 1.5a4.5 4.5 0 106.364 6.364L21 18" />
@@ -52,12 +52,15 @@ function Services() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-text-secondary text-xs md:text-sm font-medium mb-4">
-            What I Do
-          </span>
-          <h2 className="font-heading font-bold text-3xl md:text-5xl text-white mt-3">
-            My <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Services</span>
-          </h2>
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-text-secondary text-xs md:text-sm font-medium mb-4">
+              What I Can Help With
+            </span>
+            <h2 className="font-heading font-bold text-3xl md:text-5xl text-white mt-3">
+              My <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Services</span>
+            </h2>
+            <p className="text-text-secondary text-sm md:text-base max-w-2xl mx-auto mt-4">
+              I build responsive websites and modern web applications while continuously learning new technologies to create clean, user-friendly digital experiences.
+            </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">

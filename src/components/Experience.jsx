@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const experience = {
   institution: 'Disdikpora Karawang',
-  division: 'General Affairs and Personnel Division (Kasubbag Umum dan Kepegawaian)',
+  division: 'General Affairs and Personnel Division',
   position: 'Administrative Staff Intern',
   period: 'PKL Period',
   location: 'Karawang, West Java',
