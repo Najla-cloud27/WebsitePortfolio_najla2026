@@ -62,6 +62,14 @@ const certificates = [
     date: "",
     file: "documents/certificates/Completion Certificate for Intro to Coding.pdf",
     category: "Programming"
+  },
+  {
+    id: 9,
+    title: "Python Essentials 1",
+    issuer: "Cisco Networking Academy",
+    date: "10 Jul 2026",
+    file: "documents/certificates/Python_Essentials_1_certificate_najla.pdf",
+    category: "Programming"
   }
 ];
 
