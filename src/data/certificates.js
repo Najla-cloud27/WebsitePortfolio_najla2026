@@ -70,6 +70,14 @@ const certificates = [
     date: "10 Jul 2026",
     file: "documents/certificates/Python_Essentials_1_certificate_najla.pdf",
     category: "Programming"
+  },
+  {
+    id: 10,
+    title: "Course Dicoding",
+    issuer: "Dicoding Indonesia",
+    date: "",
+    file: "documents/certificates/sertifikat_course_dicoding.pdf",
+    category: "Programming"
   }
 ];
 

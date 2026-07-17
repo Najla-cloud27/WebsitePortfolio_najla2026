@@ -1,42 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Import Project Images
-import iot from '../assets/iot.png';
-import iot1 from '../assets/iot1.png';
-import iot2 from '../assets/iot2.png';
-import iot3 from '../assets/iot3.png';
-import webkasur1 from '../assets/webkasur1.png';
-import webkasur2 from '../assets/webkasur2.png';
-import webkasur3 from '../assets/webkasur3.png';
-import webkasur4 from '../assets/webkasur4.png';
-import masjid from '../assets/masjid.png';
-import mindmate1 from '../assets/mindmate1.png';
-import mindmate2 from '../assets/mindmate2.png';
-import mindmate3 from '../assets/mindmate3.png';
-import mtTugas1 from '../assets/mt-tugas1.png';
-import mtTugas2 from '../assets/mt-tugas2.png';
-import mtTugas3 from '../assets/mt-tugas3.png';
-
-// Import Certificate Images from assets/sertifikat
-import pidatoBarab from '../assets/sertifikat/pidato-barab.jpeg';
-import sertifAi from '../assets/sertifikat/sertif-ai.png';
-import sertifArbain from '../assets/sertifikat/sertif-arbain.jpeg';
-import sertifBArab from '../assets/sertifikat/sertif-b.arab.jpeg';
-import sertifHtml from '../assets/sertifikat/sertif-html.png';
-import sertifikatHtmlCss from '../assets/sertifikat/sertifikat-html-css.png';
-import sertifQuran from '../assets/sertifikat/sertif-quran.jpeg';
-import sertifSmsIT from '../assets/sertifikat/sertif-smsIT.jpeg';
-import sertifUmdatul from '../assets/sertifikat/sertif-umdatul.jpeg';
-
-// Updated Projects Data
 const dataProjects = [
   {
     id: 1,
     title: "Educational Game & IoT Project",
     category: "EdTech / Scratch / PictoBlox",
-    images: [iot, iot1, iot2, iot3],
-    thumbnail: iot,
     description: "An interactive educational platform combining Scratch, PictoBlox, and IoT elements. Specifically designed to teach elementary and junior high school students foundational programming logic, computational thinking, and simple animations through engaging, block-based game development.",
     github: null
   },
@@ -44,8 +13,6 @@ const dataProjects = [
     id: 2,
     title: "Cileungsi Foam Bed E-Commerce",
     category: "Web Development",
-    images: [webkasur1, webkasur2, webkasur3, webkasur4],
-    thumbnail: webkasur1,
     description: "A responsive e-commerce web application tailored for a local foam bed business in Cileungsi. It features an interactive product catalog, seamless landing page, and dynamic UI to enhance digital presence and user experience.",
     github: "https://github.com/naiiUnaisz/project-web-toko-KasurBusa-Unaisah-250458302059.git"
   },
@@ -53,8 +20,6 @@ const dataProjects = [
     id: 3,
     title: "Al-Markaz Mosque Web Portal",
     category: "Web Development",
-    images: [masjid],
-    thumbnail: masjid,
     description: "A community-focused web portal developed for Mosque management. It provides transparency and community engagement by displaying prayer schedules, religious study event (kajian) announcements, and transparent information for the congregation.",
     github: "https://github.com/naiiUnaisz/website-masjid.git"
   },
@@ -62,8 +27,6 @@ const dataProjects = [
     id: 4,
     title: "MindMate: Task & Wellness App",
     category: "Mobile App / Flutter / Laravel",
-    images: [mindmate1, mindmate2, mindmate3],
-    thumbnail: mindmate1,
     description: "A cross-platform mobile application built with Flutter, Laravel, and MySQL. Serving as a smart to-do list and task planner, it is specifically designed to help students manage their academic schedules while maintaining their mental well-being.",
     github: "https://github.com/naiiUnaisz/mindmate-flutter.git"
   },
@@ -71,8 +34,6 @@ const dataProjects = [
     id: 5,
     title: "M-Tugas Academic Management",
     category: "Web Development / Laravel",
-    images: [mtTugas1, mtTugas2, mtTugas3],
-    thumbnail: mtTugas1,
     description: "A comprehensive academic task management system built with Laravel. It assists students in organizing assignments, tracking submission deadlines, and managing their educational workflow efficiently.",
     github: "https://github.com/naiiUnaisz/web-ManajemeTugas-laraver.git"
   }
@@ -83,7 +44,6 @@ const dataCertificates = [
     id: 'cert-1',
     title: 'EdTech Technology Trainer Certification',
     category: 'Technology & EdTech',
-    image: sertifSmsIT,
     desc: 'Comprehensive certification in mastering modern technology curriculum (AI, IoT, Robotics, Scratch, Roblox Creator, Minecraft) specifically designed for teaching and training young generations.',
     issuer: 'IDN Education Directorate'
   },
@@ -91,7 +51,6 @@ const dataCertificates = [
     id: 'cert-2',
     title: 'Basic Artificial Intelligence (AI) Specialization',
     category: 'Technology & EdTech',
-    image: sertifAi,
     desc: 'Graduated with competency verification in understanding basic artificial intelligence concepts, machine learning workflows, and applying modern technology to solve problems.',
     issuer: 'Dicoding Indonesia (IDCamp)'
   },
@@ -99,7 +58,6 @@ const dataCertificates = [
     id: 'cert-3',
     title: 'Masterclass Web Development & UI Design',
     category: 'Technology & EdTech',
-    image: sertifikatHtmlCss,
     desc: 'Achieved very satisfactory grade (A) in designing and structuring modern, responsive web application interfaces using HTML5, CSS3, and JavaScript layout algorithms.',
     issuer: 'Skillpedia Indonesia'
   },
@@ -107,7 +65,6 @@ const dataCertificates = [
     id: 'cert-4',
     title: 'Fundamental Front-End Developer Certification',
     category: 'Technology & EdTech',
-    image: sertifHtml,
     desc: 'Industry-standard recognition of technical competence in building semantic, accessible, and responsive web layout structures using basic HTML standards.',
     issuer: 'Skilvul Academy'
   },
@@ -115,7 +72,6 @@ const dataCertificates = [
     id: 'cert-5',
     title: '2nd Place Arabic Public Speaking Championship',
     category: 'Islamic Studies & Academics',
-    image: pidatoBarab,
     desc: 'Award for persuasive communication skills, articulate language rhetoric, and high-level confidence in formal public speaking.',
     issuer: 'SMAI Cahaya Sunnah PKBM'
   },
@@ -123,7 +79,6 @@ const dataCertificates = [
     id: 'cert-6',
     title: 'Mumtaz: Hadith Arbain Munaqosyah Certification',
     category: 'Islamic Studies & Academics',
-    image: sertifArbain,
     desc: 'Graduated with Mumtaz (Perfect) predicate for fluent memorization, contextual understanding, and linguistic analysis of 42 pillars of An-Nawawi Hadiths.',
     issuer: 'SMAI Cahaya Sunnah'
   },
@@ -131,7 +86,6 @@ const dataCertificates = [
     id: 'cert-7',
     title: 'Jayyid Jiddan: Quran Memorization Credential',
     category: 'Islamic Studies & Academics',
-    image: sertifQuran,
     desc: 'Passed systematic testing (munaqosyah) of Quran memorization (Juz 1-7, 26-30) with Very Good (Jayyid Jiddan) predicate, showing high commitment and discipline.',
     issuer: 'SMAI Cahaya Sunnah'
   },
@@ -139,7 +93,6 @@ const dataCertificates = [
     id: 'cert-8',
     title: 'Legal & Hadith Umdatul Ahkam Understanding Certification',
     category: 'Islamic Studies & Academics',
-    image: sertifUmdatul,
     desc: 'Academic recognition for deepening Islamic jurisprudence and law proven through systematic matn memorization and language analysis with Good (Jayyid) predicate.',
     issuer: 'SMAI Cahaya Sunnah'
   },
@@ -147,7 +100,6 @@ const dataCertificates = [
     id: 'cert-9',
     title: 'Best Graduate Advanced Arabic Grammar',
     category: 'Islamic Studies & Academics',
-    image: sertifBArab,
     desc: 'Achieved final grade of 95 in mastering systematic grammar, vocabulary syntax, and functional grammatical rules (Nahwu & Shorof) based on Durusul Lughoh Book Vol 1.',
     issuer: 'Rumaysho Academy'
   }
@@ -164,8 +116,10 @@ export default function CosmicCarousel() {
   useEffect(() => {
     if (selectedCard && selectedCard.images && selectedCard.images.length > 0) {
       setActiveImage(selectedCard.images[0]);
-    } else if (selectedCard) {
+    } else if (selectedCard && (selectedCard.thumbnail || selectedCard.image)) {
       setActiveImage(selectedCard.thumbnail || selectedCard.image);
+    } else {
+      setActiveImage(null);
     }
   }, [selectedCard]);
 
@@ -349,11 +303,15 @@ export default function CosmicCarousel() {
                 >
                   {/* Full image bleed container */}
                   <div className="relative w-full h-full overflow-hidden">
-                    <img
-                      src={item.thumbnail || item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    {(item.thumbnail || item.image) ? (
+                      <img
+                        src={item.thumbnail || item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-purple-900/80 via-pink-900/60 to-purple-800/80" />
+                    )}
                     {/* Glass dark overlay with gradient bottom */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0d071b] via-[#0d071b]/40 to-transparent"></div>
 
@@ -435,7 +393,11 @@ export default function CosmicCarousel() {
 
               {/* Large Image Container */}
               <div className="w-full h-40 md:h-80 overflow-hidden relative border-b border-purple-500/10">
-                <img src={activeImage} alt={selectedCard.title} className="w-full h-full object-cover" />
+                {activeImage ? (
+                  <img src={activeImage} alt={selectedCard.title} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-purple-900/80 via-pink-900/60 to-purple-800/80" />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#140F22] via-[#140F22]/20 to-transparent"></div>
               </div>
 
