@@ -78,6 +78,14 @@ const certificates = [
     date: "",
     file: "documents/certificates/sertifikat_course_dicoding.pdf",
     category: "Programming"
+  },
+  {
+    id: 11,
+    title: "Belajar Dasar Pemrograman JavaScript",
+    issuer: "Dicoding Indonesia",
+    date: "01 September 2026",
+    file: "documents/certificates/sertifikat_course_Dicoding_JavaScript-1.pdf",
+    category: "Programming"
   }
 ];
 
