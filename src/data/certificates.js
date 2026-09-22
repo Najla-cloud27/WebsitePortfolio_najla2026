@@ -86,6 +86,15 @@ const certificates = [
     date: "01 September 2026",
     file: "documents/certificates/sertifikat_course_Dicoding_JavaScript-1.pdf",
     category: "Programming"
+  },
+  {
+    id: 12,
+    name: "Najla Haura Mumtazah",
+    title: "Belajar Membuat Front-End Web untuk Pemula",
+    issuer: "Dicoding Indonesia",
+    date: "21 September 2026",
+    file: "documents/certificates/sertifikat_course_Belajar Frontend Web Untuk Pemula.pdf",
+    category: "Programming"
   }
 ];
 
