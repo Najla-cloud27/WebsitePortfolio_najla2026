@@ -76,7 +76,7 @@ const certificates = [
     title: "Course Dicoding",
     issuer: "Dicoding Indonesia",
     date: "",
-    file: "documents/certificates/sertifikat_course_dicoding.pdf",
+    file: "documents/certificates/sertifikat_course_dicoding_1.pdf",
     category: "Programming"
   },
   {
