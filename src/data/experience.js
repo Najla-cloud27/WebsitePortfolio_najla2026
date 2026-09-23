@@ -1,40 +1,36 @@
 const experience = [
   {
     id: 1,
-    role: "Isi nanti",
-    company: "Isi nanti",
-    period: "Isi nanti",
-    location: "Isi nanti",
+    role: 'Legal Administrative Intern',
+    company: 'Law Office Eigen Justisi & Partners',
+    period: 'July 2026 - Present',
+    location: 'Karawang, West Java, Indonesia',
+    current: true,
     description: [
-      "Isi nanti",
-      "Isi nanti"
+      'Digitized legal documents by scanning and converting physical records into digital files.',
+      'Organized and managed legal documents systematically to ensure accurate filing and easy retrieval.',
+      'Maintained and updated digital archives using Google Drive to support efficient document management.',
+      'Provided administrative support while handling confidential documents with care and discretion.',
     ],
-    technologies: []
+    technologies: ['Google Drive', 'Digital Archiving'],
   },
   {
     id: 2,
-    role: "Isi nanti",
-    company: "Isi nanti",
-    period: "Isi nanti",
-    location: "Isi nanti",
+    role: 'Administrative Staff Intern',
+    company: 'Disdikpora Karawang',
+    division: 'General Affairs and Personnel Division',
+    period: 'PKL Period',
+    location: 'Karawang, West Java',
+    current: false,
     description: [
-      "Isi nanti",
-      "Isi nanti"
+      'Managed visitor administration records and guest book documentation.',
+      'Assisted in daily office administration tasks and coordination.',
+      'Updated and maintained administrative data and filing systems.',
+      'Organized and archived official documents for personnel affairs.',
+      'Supported daily operational activities across the general affairs division.',
     ],
-    technologies: []
+    technologies: [],
   },
-  {
-    id: 3,
-    role: "Isi nanti",
-    company: "Isi nanti",
-    period: "Isi nanti",
-    location: "Isi nanti",
-    description: [
-      "Isi nanti",
-      "Isi nanti"
-    ],
-    technologies: []
-  }
 ];
 
 export default experience;

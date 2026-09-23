@@ -25,13 +25,18 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
 }
 
 body::before {
@@ -74,4 +79,26 @@ body::before {
 ::selection {
   background: var(--primary);
   color: white;
+}
+
+@keyframes spin-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.hero-orbit {
+  --orbit-r: 118px;
+}
+
+@media (min-width: 640px) {
+  .hero-orbit {
+    --orbit-r: 148px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-orbit {
+    --orbit-r: 146px;
+  }
 }
