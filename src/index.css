@@ -88,17 +88,40 @@ body::before {
 }
 
 .hero-orbit {
+  --photo-size: 168px;
   --orbit-r: 118px;
+  --chip: 38px;
+  --orbit-box: calc(var(--orbit-r) * 2 + var(--chip) + 8px);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .hero-orbit {
-    --orbit-r: 148px;
+    --photo-size: 230px;
+    --orbit-r: 152px;
+    --chip: 42px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-orbit {
+    --photo-size: 300px;
+    --orbit-r: 196px;
+    --chip: 46px;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-orbit {
-    --orbit-r: 146px;
+    --photo-size: 340px;
+    --orbit-r: 220px;
+    --chip: 48px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-orbit {
+    --photo-size: 390px;
+    --orbit-r: 252px;
+    --chip: 50px;
   }
 }

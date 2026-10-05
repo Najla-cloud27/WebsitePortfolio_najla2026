@@ -50,21 +50,21 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#home" className="flex items-center gap-3 group" aria-label="Najla Haura Mumtazah - Home">
+          <a href="#home" className="flex items-center gap-3 shrink-0 group" aria-label="Najla Haura Mumtazah - Home">
             <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-heading font-bold text-white text-sm md:text-base shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-300">
               <img src={logo} alt="NH" className="w-5 h-5 md:w-6 md:h-6 object-contain" />
             </div>
             <div className="hidden sm:block">
-              <div className="font-heading font-bold text-white text-sm md:text-base leading-tight">
+              <div className="font-heading font-bold text-white text-sm md:text-base leading-tight whitespace-nowrap">
                 Najla Haura
               </div>
-              <div className="text-[10px] md:text-xs text-text-secondary tracking-wider">
+              <div className="hidden xl:block text-xs text-text-secondary tracking-wider whitespace-nowrap">
                 Website Developer • Flutter UI
               </div>
             </div>
           </a>
 
-          <div className="hidden lg:flex items-center gap-0.5">
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -74,7 +74,7 @@ function Navbar() {
                   scrollTo(link.href);
                   setActiveLink(link.href);
                 }}
-                className={`relative px-3 xl:px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
+                className={`relative px-2.5 xl:px-4 py-2 rounded-lg text-[13px] xl:text-sm font-medium whitespace-nowrap transition-colors duration-300 ${
                   activeLink === link.href ? 'text-white' : 'text-text-secondary hover:text-white'
                 }`}
               >
@@ -90,7 +90,7 @@ function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <a
               href="#contact"
               onClick={(e) => {
@@ -98,7 +98,7 @@ function Navbar() {
                 setMobileOpen(false);
                 scrollTo('#contact');
               }}
-              className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-lg bg-gradient-to-r from-primary to-secondary text-white text-sm font-semibold hover:shadow-[0_0_25px_rgba(79,124,255,0.4)] hover:-translate-y-0.5 transition-all duration-300"
+              className="hidden lg:inline-flex items-center whitespace-nowrap px-5 py-2.5 rounded-lg bg-gradient-to-r from-primary to-secondary text-white text-sm font-semibold hover:shadow-[0_0_25px_rgba(79,124,255,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             >
               Hire Me
             </a>

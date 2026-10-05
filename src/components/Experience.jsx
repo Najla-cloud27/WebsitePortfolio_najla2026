@@ -30,7 +30,7 @@ function Experience() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-6 md:gap-8 sm:grid-cols-2">
+        <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
           {experienceData.map((exp, i) => (
             <motion.div
               key={exp.id}

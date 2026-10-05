@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { siteInfo, cvUrl, profileImg } from '../data/site.js';
+import education from '../data/education.js';
 import { GithubIcon, LinkedinIcon, DownloadIcon, MapPinIcon } from './icons.jsx';
 
 const fadeUp = (i = 0) => ({
@@ -12,22 +13,15 @@ const fadeUp = (i = 0) => ({
 const personalInfo = [
   { label: 'Location', value: 'Karawang, West Java, Indonesia' },
   { label: 'Email', value: siteInfo.email },
-  { label: 'Focus', value: 'Web & Mobile Development' },
+  { label: 'Focus', value: 'Frontend & UI Development' },
 ];
 
 const interests = [
   'Website Development',
   'Frontend Development',
-  'Backend Development',
+  'UI Development',
   'Flutter UI Development',
 ];
-
-const education = {
-  school: 'Politeknik IDN Bogor',
-  program: 'Teknologi Rekayasa Perangkat Lunak (TRPL)',
-  semester: 'Semester 3',
-  note: 'Active student',
-};
 
 function About() {
   return (
@@ -107,41 +101,60 @@ function About() {
                 Who I Am
               </h3>
               <p className="text-text-secondary leading-relaxed mb-4">
-                I'm an active Software Engineering student pursuing{' '}
-                <span className="text-white font-medium">
-                  Teknologi Rekayasa Perangkat Lunak (TRPL)
-                </span>{' '}
-                at Politeknik IDN Bogor, with a passion for building modern,
-                functional, and user-friendly digital products across web and mobile platforms.
+                I&apos;m currently a third-semester student at{' '}
+                <span className="text-white font-medium">Politeknik IDN Bogor</span>, studying D4
+                Teknologi Rekayasa Perangkat Lunak (TRPL). Before that, I completed a Rekayasa
+                Perangkat Lunak (RPL) program at SMK IT Assalam Karawang.
+              </p>
+              <p className="text-text-secondary leading-relaxed mb-4">
+                My focus is website development, particularly frontend development and UI. I build
+                interfaces with HTML, CSS, JavaScript, React, and Tailwind CSS, and work with PHP,
+                Laravel, and MySQL on the application and data side. I also build mobile UI with
+                Flutter.
               </p>
               <p className="text-text-secondary leading-relaxed mb-8">
-                My interests span Website Development, Frontend &amp; Backend Development, and
-                Flutter Development. Along the way I've built projects using Laravel, Flutter, React,
-                HTML, CSS, JavaScript, Tailwind CSS, and MySQL — and I'm always learning more.
+                Most of my hands-on experience comes from building website and application projects:
+                responsive interfaces, CRUD features, and database-driven applications. My
+                internships in legal administration and in general affairs also taught me how to keep
+                documents and files organised, and I carry that same habit into how I structure a
+                project.
               </p>
 
               {/* Education */}
               <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-5 mb-6">
-                <h4 className="font-heading font-bold text-lg text-white mb-3">
+                <h4 className="font-heading font-bold text-lg text-white mb-4">
                   Education
                 </h4>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/20 flex items-center justify-center text-primary shrink-0">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold text-sm">
-                      {education.school}
+                <div className="space-y-4">
+                  {education.map((item) => (
+                    <div key={item.id} className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/20 flex items-center justify-center text-primary shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                        </svg>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="text-white font-semibold text-sm leading-snug">
+                            {item.school}
+                          </div>
+                          <span className="text-primary text-xs font-medium whitespace-nowrap shrink-0 mt-0.5">
+                            {item.period}
+                          </span>
+                        </div>
+                        {item.degree && (
+                          <div className="text-text-secondary text-sm mt-0.5">
+                            {item.degree}
+                          </div>
+                        )}
+                        {item.note && (
+                          <div className="text-text-secondary/70 text-xs mt-0.5">
+                            {item.note}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                    <div className="text-text-secondary text-sm">
-                      {education.program}
-                    </div>
-                    <div className="text-text-secondary/70 text-xs mt-0.5">
-                      {education.semester} • {education.note}
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
