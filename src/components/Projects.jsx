@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import projectsData from '../data/projects.js';
-import ProjectCarousel from './ProjectCarousel.jsx';
+import ProjectCarousel, { galleryFit } from './ProjectCarousel.jsx';
 import ProjectDetailModal from './ProjectDetailModal.jsx';
 import { GithubIcon, ExternalLinkIcon, GridIcon } from './icons.jsx';
 
@@ -61,7 +61,7 @@ function FeaturedProject({ project, index, onOpen }) {
         }`}
       >
         <div className={`${reversed ? 'lg:col-start-2' : ''}`}>
-          <ProjectCarousel images={project.images} alt={project.title} isMobileApp={project.isMobileApp} />
+          <ProjectCarousel images={project.images} alt={project.title} isMobileApp={project.isMobileApp} fit={galleryFit(project)} />
         </div>
 
         <div className={reversed ? 'lg:col-start-1 lg:row-start-1' : ''}>

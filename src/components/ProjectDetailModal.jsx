@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ProjectCarousel from './ProjectCarousel.jsx';
+import ProjectCarousel, { galleryFit } from './ProjectCarousel.jsx';
 import { CloseIcon, GithubIcon, ExternalLinkIcon } from './icons.jsx';
 
 function ProjectDetailModal({ project, onClose }) {
@@ -69,6 +69,7 @@ function ProjectDetailModal({ project, onClose }) {
                   alt={project.title}
                   isMobileApp={project.isMobileApp}
                   rounded="rounded-xl"
+                  fit={galleryFit(project)}
                 />
               </div>
 

@@ -2,7 +2,13 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeftIcon, ChevronRightIcon } from './icons.jsx';
 
-function ProjectCarousel({ images, alt = 'Project screenshot', isMobileApp = false, rounded = 'rounded-2xl' }) {
+function ProjectCarousel({
+  images,
+  alt = 'Project screenshot',
+  isMobileApp = false,
+  rounded = 'rounded-2xl',
+  fit = 'cover',
+}) {
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef(null);
@@ -22,6 +28,12 @@ function ProjectCarousel({ images, alt = 'Project screenshot', isMobileApp = fal
   if (!images || images.length === 0) return null;
 
   const resolvedImages = images.map((img) => new URL(`../assets/${img}`, import.meta.url).href);
+  const imageFitClass =
+    fit === 'contain'
+      ? 'object-contain'
+      : isMobileApp
+        ? 'object-contain p-4 md:p-6'
+        : 'object-cover';
 
   const goPrev = (e) => {
     e?.stopPropagation();
@@ -48,7 +60,7 @@ function ProjectCarousel({ images, alt = 'Project screenshot', isMobileApp = fal
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className={`w-full h-full ${isMobileApp ? 'object-contain p-4 md:p-6' : 'object-cover'}`}
+            className={`w-full h-full ${imageFitClass}`}
             draggable={false}
           />
         </AnimatePresence>
@@ -97,6 +109,10 @@ function ProjectCarousel({ images, alt = 'Project screenshot', isMobileApp = fal
       )}
     </div>
   );
+}
+
+export function galleryFit(project) {
+  return project?.slug === 'website-fokusin' ? 'contain' : 'cover';
 }
 
 export default ProjectCarousel;

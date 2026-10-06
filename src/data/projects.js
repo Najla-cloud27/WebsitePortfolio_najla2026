@@ -25,6 +25,25 @@ const projects = [
     featured: true,
   },
   {
+    id: 6,
+    title: 'Website Fokusin',
+    slug: 'website-fokusin',
+    category: 'Web Application',
+    description:
+      'Landing and frontend pages for Fokusin, showcasing the mobile app features, interface previews, and information in a clean, responsive website design.',
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    images: [
+      'projects/website_frontend_apkfokusin/gambar1.png',
+      'projects/website_frontend_apkfokusin/gambar2.png',
+      'projects/website_frontend_apkfokusin/gambar3.png',
+      'projects/website_frontend_apkfokusin/gambar4.png',
+    ],
+    github: '',
+    demo: '',
+    isMobileApp: false,
+    featured: true,
+  },
+  {
     id: 2,
     title: 'Website Management Kosan',
     slug: 'website-management-kosan',
