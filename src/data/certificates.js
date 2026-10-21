@@ -95,6 +95,14 @@ const certificates = [
     date: "21 September 2026",
     file: "documents/certificates/sertifikat_course_Belajar Frontend Web Untuk Pemula.pdf",
     category: "Programming"
+  },
+  {
+    id: 13,
+    title: "Persiapan Karier: Membangun Perjalanan Karier dan Kehidupan",
+    issuer: "Skillvul",
+    date: "21 October 2026",
+    file: "documents/certificates/Completion Certificate for Persiapan Karir_ Membangun Perjalanan Karir dan Kehidupan.pdf",
+    category: "Career"
   }
 ];
 
