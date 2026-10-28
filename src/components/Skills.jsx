@@ -4,9 +4,10 @@ import skillsData from '../data/skills.js';
 const skillIcons = import.meta.glob('../assets/logos/*.svg', { eager: true, query: '?url', import: 'default' });
 
 const getSkillIcon = (name) => {
-  const filename = name.toLowerCase().replace(/\s+/g, '');
+  const filename = name.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
   for (const [path, url] of Object.entries(skillIcons)) {
-    if (path.toLowerCase().includes(filename)) return url;
+    const pathLower = path.toLowerCase().replace(/-/g, '').replace(/_/g, '');
+    if (pathLower.includes(filename)) return url;
   }
   return null;
 };

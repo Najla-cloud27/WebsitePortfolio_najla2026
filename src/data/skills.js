@@ -80,13 +80,13 @@ const skills = [
   {
     id: 14,
     name: 'Microsoft Word',
-    icon: 'microsoft-word.svg',
+    icon: 'word.svg',
     category: 'Tools',
   },
   {
     id: 15,
     name: 'Microsoft Excel',
-    icon: 'microsoft-excel.svg',
+    icon: 'excel.svg',
     category: 'Tools',
   },
   {

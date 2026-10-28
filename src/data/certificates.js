@@ -1,4 +1,4 @@
-const certificates = [
+  const certificates = [
   {
     id: 1,
     title: "HTML Essentials",
@@ -102,6 +102,22 @@ const certificates = [
     issuer: "Skillvul",
     date: "21 October 2026",
     file: "documents/certificates/Completion Certificate for Persiapan Karir_ Membangun Perjalanan Karir dan Kehidupan.pdf",
+    category: "Career"
+  },
+  {
+    id: 14,
+    title: "Digital Marketing: Kunci Sukses di Era Digital",
+    issuer: "Skillvul",
+    date: "",
+    file: "documents/certificates/Completion Certificate for Digital Marketing_ Kunci Sukses di Era Digital.pdf",
+    category: "Career"
+  },
+  {
+    id: 15,
+    title: "Kesetaraan Gender: Perspektif & Praktik di Tempat Kerja",
+    issuer: "Skillvul",
+    date: "",
+    file: "documents/certificates/Completion Certificate for Kesetaraan Gender_ Perspektif & Praktik di Tempat Kerja.pdf",
     category: "Career"
   }
 ];
