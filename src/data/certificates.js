@@ -119,6 +119,14 @@
     date: "",
     file: "documents/certificates/Completion Certificate for Kesetaraan Gender_ Perspektif & Praktik di Tempat Kerja.pdf",
     category: "Career"
+  },
+  {
+    id: 16,
+    title: "Memulai Perjalanan: Mengapa Literasi AI Itu Penting",
+    issuer: "Skillvul",
+    date: "",
+    file: "documents/certificates/Completion Certificate for Memulai Perjalanan_ Mengapa Literasi AI Itu Penting.pdf",
+    category: "Career"
   }
 ];
 
