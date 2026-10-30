@@ -54,6 +54,12 @@ const skills = [
     category: 'Mobile',
   },
   {
+    id: 17,
+    name: 'Dart',
+    icon: 'dart.svg',
+    category: 'Mobile',
+  },
+  {
     id: 10,
     name: 'Git',
     icon: 'git.svg',

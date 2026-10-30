@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import skillsData from '../data/skills.js';
 
-const skillIcons = import.meta.glob('../assets/logos/*.svg', { eager: true, query: '?url', import: 'default' });
+const skillIcons = import.meta.glob('../assets/logo/*.svg', { eager: true, query: '?url', import: 'default' });
 
 const getSkillIcon = (name) => {
   const filename = name.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');

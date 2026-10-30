@@ -10,9 +10,9 @@ import {
   ArrowRightIcon,
 } from './icons.jsx';
 
-const logoUrls = import.meta.glob('../assets/logos/*.svg', { eager: true, query: '?url', import: 'default' });
+const logoUrls = import.meta.glob('../assets/logo/*.svg', { eager: true, query: '?url', import: 'default' });
 
-const getLogo = (file) => logoUrls[`../assets/logos/${file}`] || null;
+const getLogo = (file) => logoUrls[`../assets/logo/${file}`] || null;
 
 const techOrbit = [
   { name: 'HTML', icon: 'html.svg' },
